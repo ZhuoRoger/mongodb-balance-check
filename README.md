@@ -50,7 +50,7 @@ You can import balanced into your own code as it has the option to return the va
 
 ```python
 import balanced
-result balanced.is_balanced(True)
+result = balanced.is_balanced()
 print result
 {
     'chunks': {
