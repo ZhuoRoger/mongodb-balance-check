@@ -3,7 +3,7 @@ mongodb-balance-check
 
 This script provides an easy way to find out if your MongoDB shard cluster is properly balanced or not. 
 
-You can achieve the same effect by calling `db.printShardStatus()` but it requires manually parsing the output to see if the counts are balanced for all your collections, which could be difficult if you have a lot...or are lazy. This script does it for you and makes it clear.
+You can achieve the same effect by calling `db.printShardingStatus()` but it requires manually parsing the output to see if the counts are balanced for all your collections, which could be difficult if you have a lot...or are lazy. This script does it for you and makes it clear.
 
 Requirements
 ------------
