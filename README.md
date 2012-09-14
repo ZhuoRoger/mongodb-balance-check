@@ -52,5 +52,21 @@ You can import balanced into your own code as it has the option to return the va
 import balanced
 result balanced.is_balanced(True)
 print result
-{'chunks': {u'sd.servers': {u'sdapp1': 9, u'sdapp2': 9}, u'sd.users': {u'sdapp1': 62, u'sdapp2': 89}, u'sd.alerts': {u'sdapp1': 12, u'sdapp2': 12}}, 'isBalanced': False}
+{
+    'chunks': {
+        u'sd.servers': {
+            u'sdapp1': 9,
+            u'sdapp2': 9
+        },
+        u'sd.users': {
+            u'sdapp1': 62,
+            u'sdapp2': 89
+        },
+        u'sd.alerts': {
+            u'sdapp1': 12,
+            u'sdapp2': 12
+        }
+    },
+    'isBalanced': False
+}
 ```
