@@ -67,6 +67,11 @@ print result
             u'sdapp2': 12
         }
     },
+    'balanceStatus': {
+        u'sd.servers': True, 
+        u'sd.users': False, 
+        u'sd.alerts': True
+    }
     'isBalanced': False
 }
 ```

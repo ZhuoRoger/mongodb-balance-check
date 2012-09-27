@@ -43,6 +43,8 @@ def is_balanced(output=False):
 
 	isBalanced = True
 
+	balanceStatus = {}
+
 	# Loop through each ns and determine if it's balanced or not
 	for ns in nss:
 		balanced = nss[ns] / shardsCount
@@ -50,16 +52,19 @@ def is_balanced(output=False):
 		if output == True:
 			print ns
 
+		balanceStatus[ns] = True
+
 		for shard in chunks[ns]:
 			if chunks[ns][shard] > balanced - threshold and chunks[ns][shard] < balanced + threshold:
+				
 				if output == True:
 					with indent(4):
 						puts(shard + colored.green(" balanced ") + "(" + str(chunks[ns][shard]) + ")")
 			else:
 				isBalanced = False
-
+				balanceStatus[ns] = False
 				if output == True:
 					with indent(4):
 						puts(shard + colored.red(" unbalanced ") + "(" + str(chunks[ns][shard]) + ")")
 
-	return { "isBalanced" : isBalanced, "chunks" : chunks }
+	return { "isBalanced" : isBalanced, "chunks" : chunks, "balanceStatus" : balanceStatus }
